@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .feed {
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .entry {
+            margin-bottom: 60px;
+            background: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .entry:hover {
+            transform: translateY(-5px);
+        }
+
+        .entry img {
+            width: 100%;
+            display: block;
+            border-bottom: 3px solid #ff6b6b;
+        }
+
+        .entry-meta {
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .timestamp {
+            color: #ff6b6b;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #555;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ .Site.Title }}</h1>
+        <p class="subtitle">{{ .Site.Params.subtitle }}</p>
+    </header>
+
+    <div class="feed">
+        {{ range .Site.RegularPages }}
+        <div class="entry">
+            <img src="{{ .Params.image }}" alt="{{ .Title }}">
+            <div class="entry-meta">
+                <span class="timestamp">{{ .Date.Format "15:04:05" }}</span>
+                {{ if .Params.caption }}
+                <p style="margin-top: 10px; color: #aaa;">{{ .Params.caption }}</p>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+
+    <footer>
+        <p>A chronicle of pain and suffering</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,7 @@
+baseURL = 'https://cloudfrustration.com/'
+languageCode = 'en-us'
+title = 'CloudFrustration'
+theme = 'frustration'
+
+[params]
+subtitle = "Documenting an engineer's descent into madness while adding CloudFormation support to Infracost"
