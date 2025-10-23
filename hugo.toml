@@ -1,4 +1,4 @@
-baseURL = 'https://aliscott.github.io/cloudfrustration/'
+baseURL = 'https://cloudfrustration.com/'
 languageCode = 'en-us'
 title = 'CloudFrustration'
 theme = 'frustration'
