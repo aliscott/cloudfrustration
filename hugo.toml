@@ -4,4 +4,4 @@ title = 'CloudFrustration'
 theme = 'frustration'
 
 [params]
-subtitle = "Documenting an engineer's descent into madness while adding CloudFormation support to Infracost"
+subtitle = "Documenting an engineer's descent into madness while adding CloudFormation support to <a href=\"https://www.infracost.io\">Infracost</a>"

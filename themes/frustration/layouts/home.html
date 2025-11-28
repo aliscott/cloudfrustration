@@ -245,7 +245,7 @@
             <img src="/images/scream.png" alt="The Scream" class="logo">
             <h1>{{ .Site.Title }}</h1>
         </div>
-        <p class="subtitle">{{ .Site.Params.subtitle }}</p>
+        <p class="subtitle">{{ .Site.Params.subtitle | safeHTML }}</p>
     </header>
 
     <div class="feed">
